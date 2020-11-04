@@ -1,1 +1,5 @@
  IIT510_final_projject
+食堂消费系统：
+一款给食堂提供商的消费软件系统，该系统可以帮助食堂提供商管理食堂消费，功能包括注册用户、注销用户、充值、消费、结算，可以设置不同的套餐，并对不同的套餐标价，能够提供月度统计报表和即时统计报表，能够查询个人消费情况。
+canteen consume system:
+This is a software app for enterprise’s canteen which provides canteen suppliers to manage consuming behavior in canteen,it includes functions like staff registeration ,cancellation ,recharge,consumption,settlement,configure set meals,pricing,be able to output statistics report,and be able to provide query service.
