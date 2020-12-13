@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1200.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: bbbdbd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+	<children>
+	     
+		 <TabPane layoutX="6.0" layoutY="6.0" prefHeight="787.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Account management">
+					<content>
+						<AnchorPane style="-fx-background-color: bbbdbd;">
+							<children>
+								
+								<Button layoutX="193.0" layoutY="78.0" mnemonicParsing="false" onAction="#viewAccounts" text="View Accounts" />
+								<Button layoutX="364.0" layoutY="78.0" mnemonicParsing="false" onAction="#updateRec" text="Update Account" />
+								<Button layoutX="544.0" layoutY="78.0" mnemonicParsing="false" onAction="#deleteRec" text="Delete Account" />
+								<Pane fx:id="pane1" layoutX="10.0" layoutY="135.0" prefHeight="604.0" prefWidth="975.0" style="-fx-border-color: Black; -fx-border-width: 1;" visible="false">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+									<Label layoutX="92.0" layoutY="25.0" text="Update Account" />
+										<Button layoutX="345.0" layoutY="229.0" mnemonicParsing="false" onAction="#submitUpdate" text="Submit" />
+										<TextField fx:id="TxtBalance" layoutX="350.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtId" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="212.0" layoutY="98.0" text="Enter account ID" />
+										<Label layoutX="212.0" layoutY="149.0" text="Enter new balance" />
+										<Label fx:id="LblUpdateAc" layoutX="14.0" layoutY="234.0" text="" textFill="#803131" visible="false" />
+									</children>
+								</Pane>
+								<Pane fx:id="pane2" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: Blue; -fx-border-width: 1;" visible="false">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+									<Label layoutX="92.0" layoutY="25.0" text="Delete Account" />
+										<Button layoutX="345.0" layoutY="331.0" mnemonicParsing="false" onAction="#submitDelete" text="Submit" />
+										<TextField fx:id="TxtDelId" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="212.0" layoutY="149.0" text="Enter delete ID" />
+										<Label fx:id="LblDelId" layoutX="14.0" layoutY="176.0" text="" textFill="#803131" visible="false" />
+									</children>
+								</Pane>
+								<Button layoutX="722.0" layoutY="78.0" mnemonicParsing="false" onAction="#addAccountRec" text="Add Account" />
+								<Pane fx:id="pane3" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: #bbccff; -fx-border-width: 1;">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+										<Button layoutX="318.0" layoutY="332.0" mnemonicParsing="false" onAction="#submitAccount" text="Submit" />
+										<TextField fx:id="TxtName" layoutX="290.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtBa" layoutX="290.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtRole" layoutX="290.0" layoutY="193.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtPwd" layoutX="290.0" layoutY="241.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="92.0" layoutY="25.0" text="Add Account" />
+										<Label fx:id="LblAddAc" layoutX="395.0" layoutY="392.0" text="" textFill="#803131" visible="false" />
+										<Label layoutX="212.0" layoutY="98.0" text="Name" />
+										<Label layoutX="212.0" layoutY="149.0" text="balance" />
+										<Label layoutX="223.0" layoutY="198.0" text="role" />
+										<Label layoutX="216.0" layoutY="246.0" text="pwd" />
+									</children>
+								</Pane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Order management ">
+									<content>
+						<AnchorPane style="-fx-background-color: bbbdbd;">
+							<children>							
+								<Button layoutX="193.0" layoutY="78.0" mnemonicParsing="false" onAction="#viewOrders" text="View Orders" />
+								<Button layoutX="364.0" layoutY="78.0" mnemonicParsing="false" onAction="#updateOrderRec" text="Update Order" />
+								<Button layoutX="544.0" layoutY="78.0" mnemonicParsing="false" onAction="#deleteOrderRec" text="Delete Order" />
+								<Pane fx:id="pane4" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: Black; -fx-border-width: 1;" visible="false">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+									<Label layoutX="92.0" layoutY="25.0" text="Update Order" />
+										<Button layoutX="345.0" layoutY="229.0" mnemonicParsing="false" onAction="#submitUpdateOrder" text="Submit" />
+										<TextField fx:id="TxtUpdateOrderId" layoutX="350.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtUpdateOrderStatus" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="212.0" layoutY="98.0" text="Enter Order ID" />
+										<Label layoutX="212.0" layoutY="149.0" text="Enter new Order status" />
+										<Label fx:id="LblUpdateOrder" layoutX="14.0" layoutY="234.0" text="" textFill="#803131" visible="false" />
+									</children>
+								</Pane>
+								<Pane fx:id="pane5" layoutX="10.0" layoutY="135.0" prefHeight="604.0" prefWidth="975.0" style="-fx-border-color: Blue; -fx-border-width: 1;" visible="false">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+									<Label layoutX="92.0" layoutY="25.0" text="Delete Order" />
+										<Button layoutX="345.0" layoutY="331.0" mnemonicParsing="false" onAction="#submitDeleteOrder" text="Submit" />
+										<TextField fx:id="TxtDelOrderId" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="212.0" layoutY="149.0" text="Enter delete ID" />
+										<Label fx:id="LblDelOrderId" layoutX="290.0" layoutY="176.0" text="" textFill="#803131" visible="false" />
+									</children>
+								</Pane>
+								<Button layoutX="722.0" layoutY="78.0" mnemonicParsing="false" onAction="#addOrderRec" text="Add Order" />
+								<Pane fx:id="pane6" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: #bbccff; -fx-border-width: 1;">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+										<Button layoutX="318.0" layoutY="452.0" mnemonicParsing="false" onAction="#submitAddOrder" text="Submit" />
+										<TextField fx:id="TxtOrderName" layoutX="290.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtOrderPrice" layoutX="290.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtOrderStatus" layoutX="290.0" layoutY="193.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtOrderCombo_name" layoutX="290.0" layoutY="241.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="92.0" layoutY="25.0" text="Add Order" />
+										<Label fx:id="LblAddOrder" layoutX="395.0" layoutY="392.0" text="" textFill="#803131" visible="false" />
+										<Label layoutX="212.0" layoutY="98.0" text="Name" />
+										<Label layoutX="212.0" layoutY="149.0" text="Price" />
+										<Label layoutX="212.0" layoutY="198.0" text="Status" />
+										<Label layoutX="205.0" layoutY="246.0" text="Combo Name" />
+									</children>
+								</Pane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+					<Tab text="Combo management ">
+									<content>
+						<AnchorPane style="-fx-background-color: bbbdbd;">
+							<children>
+								
+								<Button layoutX="193.0" layoutY="78.0" mnemonicParsing="false" onAction="#viewCombos" text="View Combos" />
+								<Button layoutX="364.0" layoutY="78.0" mnemonicParsing="false" onAction="#updateComboRec" text="Update Combo" />
+								<Button layoutX="544.0" layoutY="78.0" mnemonicParsing="false" onAction="#deleteComboRec" text="Delete Combo" />
+								<Pane fx:id="pane7" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: Black; -fx-border-width: 1;" visible="false">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+									<Label layoutX="92.0" layoutY="25.0" text="Update Order" />
+										<Button layoutX="345.0" layoutY="229.0" mnemonicParsing="false" onAction="#submitUpdateCombo" text="Submit" />
+										<TextField fx:id="TxtUpdateComboId" layoutX="350.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtUpdateComboPrice" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="212.0" layoutY="98.0" text="Enter Combo ID" />
+										<Label layoutX="212.0" layoutY="149.0" text="Enter new price" />
+										<Label fx:id="LblUpdateCombo" layoutX="290.0" layoutY="234.0" text="" textFill="#803131" visible="false" />
+									</children>
+								</Pane>
+								<Pane fx:id="pane8" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: Blue; -fx-border-width: 1;" visible="false">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+									<Label layoutX="92.0" layoutY="25.0" text="Delete Order" />
+										<Button layoutX="345.0" layoutY="331.0" mnemonicParsing="false" onAction="#submitDeleteCombo" text="Submit" />
+										<TextField fx:id="TxtDelComboId" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="212.0" layoutY="149.0" text="Enter delete ID" />
+										<Label fx:id="LblDelComboId" layoutX="14.0" layoutY="176.0" text="" textFill="#803131" visible="false" />
+									</children>
+								</Pane>
+								<Button layoutX="722.0" layoutY="78.0" mnemonicParsing="false" onAction="#addComboRec" text="Add Combo" />
+								<Pane fx:id="pane9" layoutX="10.0" layoutY="135.0" prefHeight="504.0" prefWidth="975.0" style="-fx-border-color: #bbccff; -fx-border-width: 1;">
+									<effect>
+										<Glow level="0.0" />
+									</effect>
+									<children>
+										<Button layoutX="318.0" layoutY="222.0" mnemonicParsing="false" onAction="#submitAddCombo" text="Submit" />
+										<TextField fx:id="TxtComboName" layoutX="290.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtComboPrice" layoutX="290.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<Label layoutX="92.0" layoutY="25.0" text="Add Combo" />
+										<Label fx:id="LblAddCombo" layoutX="395.0" layoutY="392.0" text="" textFill="#803131" visible="false" />
+										<Label layoutX="212.0" layoutY="98.0" text="Name" />
+										<Label layoutX="212.0" layoutY="149.0" text="price" />
+									</children>
+								</Pane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<Button layoutX="368.0" layoutY="714.0" mnemonicParsing="false" onAction="#logout" prefHeight="54.0" prefWidth="266.0" text="Logout" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="368.0" AnchorPane.rightAnchor="372.0" AnchorPane.topAnchor="714.0" />
+	</children>
+</AnchorPane>
