@@ -210,31 +210,31 @@ public class AdminController {
 
 	}
 	public void submitAccount() throws NoSuchAlgorithmException, UnsupportedEncodingException, SQLException {
-		String name = TxtName.getText();
-		double balance = Double.parseDouble(TxtBa.getText());
-		String role = TxtRole.getText();
+//		String name = TxtName.getText();
+//		double balance = Double.parseDouble(TxtBa.getText());
+//		String role = TxtRole.getText();
 		String pwd=EncoderByMd5(TxtPwd.getText());
-				
-		account.createAccount(name,balance,role,pwd);
+//				
+//		account.createAccount(name,balance,role,pwd);
 		// INSERT INTO BANK TABLE
-//		try {
-//			// Execute a query
-//			System.out.println("Inserting records into the table...");
-//			stmt = conn.getConnection().createStatement();
-//			String sql = null;
-//
-//			// Include all object data to the database table
-//
-//	//		sql = "insert into canteen_accounts(name,balance,role,pwd) values ('" + TxtName.getText() + "','" + TxtBa.getText()+ "','" + TxtRole.getText()+ "','" + LoginController.EncoderByMd5(TxtPwd.getText())
-//	//				+ "')";
-//			sql = "insert into canteen_accounts(name,balance,role,pwd) values ('" + TxtName.getText() + "','" + TxtBa.getText()+ "','" + TxtRole.getText()+ "','" + TxtPwd.getText() + "')";
-//			stmt.executeUpdate(sql);
-//			System.out.println("account added");
-//			LblAddAc.setText("account added");
-//			LblAddAc.setVisible(true);
-//		} catch (SQLException se) {
-//			se.printStackTrace();
-//		}
+		try {
+			// Execute a query
+			System.out.println("Inserting records into the table...");
+			stmt = conn.getConnection().createStatement();
+			String sql = null;
+
+			// Include all object data to the database table
+
+	//		sql = "insert into canteen_accounts(name,balance,role,pwd) values ('" + TxtName.getText() + "','" + TxtBa.getText()+ "','" + TxtRole.getText()+ "','" + LoginController.EncoderByMd5(TxtPwd.getText())
+	//				+ "')";
+			sql = "insert into canteen_accounts(name,balance,role,pwd) values ('" + TxtName.getText() + "','" + TxtBa.getText()+ "','" + TxtRole.getText()+ "','" + pwd + "')";
+			stmt.executeUpdate(sql);
+			System.out.println("account added");
+			LblAddAc.setText("account added");
+			LblAddAc.setVisible(true);
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
 		
 	}
 
