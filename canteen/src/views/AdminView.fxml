@@ -34,8 +34,8 @@
 									<children>
 									<Label layoutX="92.0" layoutY="25.0" text="Update Account" />
 										<Button layoutX="345.0" layoutY="229.0" mnemonicParsing="false" onAction="#submitUpdate" text="Submit" />
-										<TextField fx:id="TxtBalance" layoutX="350.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
-										<TextField fx:id="TxtId" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtId" layoutX="350.0" layoutY="93.0" prefHeight="27.0" prefWidth="276.0" />
+										<TextField fx:id="TxtBalance" layoutX="350.0" layoutY="144.0" prefHeight="27.0" prefWidth="276.0" />
 										<Label layoutX="212.0" layoutY="98.0" text="Enter account ID" />
 										<Label layoutX="212.0" layoutY="149.0" text="Enter new balance" />
 										<Label fx:id="LblUpdateAc" layoutX="14.0" layoutY="234.0" text="" textFill="#803131" visible="false" />
